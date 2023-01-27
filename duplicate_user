@@ -1,0 +1,22 @@
+class Duplicate_user:
+    def __init__(self,name,password,user_info,mobile_number):
+        self.name=name
+        self.password=password
+        self.user_info=user_info
+        self.mobile_number=mobile_number
+    def __eq__(self, other):
+        return (self.mobile_number) == (other.mobile_number)
+print("Enter the first user information")
+Name = input("enter the name =\n")
+User = input("enter the username =\n")
+Pass_word = input("enter the password =\n")
+Mobile = input("enter the mobile number =\n")
+print("Enter the second user information ")
+n = input("enter the name =\n")
+u = input("enter the username =\n")
+p = input("enter the password =\n")
+m = input("enter the mobile number =\n")
+if Name == n and Mobile == m:
+    print("Given both users information are equal")
+else:
+    print("Given users information are not equal")
