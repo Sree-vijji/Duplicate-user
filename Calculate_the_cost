@@ -1,0 +1,23 @@
+import datetime
+class Hall():
+    def __init__(self, start_date: str, end_date: str, cost_per_day: int):
+         self.start_date = datetime.datetime.strptime(start_date, '%b %d %Y')
+         self.end_date = datetime.datetime.strptime(end_date, '%b %d %Y')
+         self.cost_per_day = cost_per_day
+    def no_days(self):
+        delta = self.end_date - self.start_date
+        return delta.days
+
+    def cost(self, d):
+        return d * self.cost_per_dayprint("enter start time: ")
+
+print("enter start time: ")
+d1 = input()
+print("enter end time")
+d2 = input()
+print("enter cost per day")
+c = int(input())
+print("")
+hall = Hall(d1, d2, c)
+print("total number of days", hall.no_days())
+print("total cost: ",hall.cost(hall.no_days()))
